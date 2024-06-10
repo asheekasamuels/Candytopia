@@ -58,7 +58,7 @@
     </main>
     <footer class="container-fluid">
       <div class="row">
-        <p class="lead">Copyright &copy; 
+        <p class="lead">The Cake Studio &copy; 
           <span currentYear></span></p>
       </div>
     </footer>
@@ -68,6 +68,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
       <!-- Custom's script -->
-      <script></script>
+      <script>
+        // current year
+        document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
+      </script>
   </body>
 </html>
