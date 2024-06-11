@@ -28,10 +28,9 @@ img {
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
-    background-image: url(/images/BackGround.jpg);
 }
 /* text-align: center */
-:is(h2, footer p) {
+:is(h2, h5, footer p) {
     text-align: center;
 }
 /* button */
@@ -61,7 +60,31 @@ img {
     }
 }
 
+/* HOME PAGE */
+.container-fluid1 {
+    min-height: 89.8vh;
+    display: grid;
+    place-items: center;
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    font-family: cursive;
+    color: white;
+
+}
+
 /* ABOUT PAGE */
+.container-fluid3 {
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    font-family: cursive;
+    color: white;
+
+}
+
 .container3 {
     display: flex;
     flex-wrap: wrap;
@@ -74,9 +97,9 @@ img {
 #box1 {
     margin-top: 25px;
     width: 300px;
-    background-color: #a3b18a;
-    color: #fff;
-    box-shadow: 0 0 20px 0 #3a5a40;
+    background-color: lightpink;
+    color: white;
+    box-shadow: 0 0 20px 0 palevioletred;
     border-radius: 15px;
     padding: 10px;
     text-decoration: none;

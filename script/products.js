@@ -7,6 +7,7 @@ let products =
             JSON.stringify(
                 [
                     {
+                        id: 1,
                         productName: "Gold and White Bento Cake + 5 cupcakes",
                         category: "Bento",
                         description: "Personalised bento cake with cupcakes",
@@ -15,6 +16,7 @@ let products =
             
                     },
                     {
+                        id: 2,
                         productName: "Butterfly Bento Cake + 5 cupcakes",
                         category: "Bento",
                         description: "Personalised bento cake with cupcakes",
@@ -23,6 +25,7 @@ let products =
             
                     },
                     {
+                        id: 3,
                         productName: "Pink Bento Cake + 5 cupcakes",
                         category: "Bento",
                         description: "Personalised bento cake with cupcakes",
@@ -31,6 +34,8 @@ let products =
             
                     },
                     {
+
+                        id: 4,
                         productName: "Hello Kitty Bento Cake + 5 cupcakes",
                         category: "Bento",
                         description: "Personalised bento cake with cupcakes",
@@ -39,6 +44,7 @@ let products =
             
                     },
                     {
+                        id: 5,
                         productName: "Sunflower Bento Cake + 5 cupcakes",
                         category: "Bento",
                         description: "Personalised bento cake with cupcakes",
@@ -47,6 +53,7 @@ let products =
             
                     },
                     {
+                        id: 6,
                         productName: "Frozen Character Cake",
                         category: "Character",
                         description: "Personalised 1 tier cake",
@@ -55,6 +62,7 @@ let products =
             
                     },
                     {
+                        id: 7,
                         productName: "Cocomelon Character Cake",
                         category: "Character",
                         description: "Personalised 1 tier cake",
@@ -63,6 +71,7 @@ let products =
             
                     },
                     {
+                        id: 8,
                         productName: "Paw Patrol Character Cake",
                         category: "Character",
                         description: "Personalised 1 tier cake",
@@ -71,6 +80,7 @@ let products =
             
                     },
                     {
+                        id: 9,
                         productName: "SpongeBob Character Cake",
                         category: "Character",
                         description: "Personalised 1 tier cake",
@@ -79,6 +89,7 @@ let products =
             
                     },
                     {
+                        id: 10,
                         productName: "Baby Shark Character Cake",
                         category: "Character",
                         description: "Personalised 1 tier cake",
@@ -87,6 +98,7 @@ let products =
             
                     },
                     {
+                        id: 11,
                         productName: "Bluey Cupcakes",
                         categor: "Cupcake",
                         description: "12 personalised cupcakes",
@@ -95,6 +107,7 @@ let products =
             
                     },
                     {
+                        id: 12,
                         productName: "Real Madrid Cupcakes",
                         category: "Cupcake",
                         description: "12 personalised cupcakes",
@@ -103,6 +116,7 @@ let products =
             
                     },
                     {
+                        id: 13,
                         productName: "Blue Personalised Cupcakes",
                         category: "Cupcake",
                         description: "12 personalised cupcakes",
@@ -111,6 +125,7 @@ let products =
             
                     },
                     {
+                        id: 14,
                         productName: "Pink Personalised Cupcakes",
                         category:"Cupcake",
                         description: "12 personalised cupcakes",
@@ -119,6 +134,7 @@ let products =
             
                     },
                     {
+                        id: 15,
                         productName: "TwentyFirst Personalised Cupcakes",
                         category: "Cupcake",
                         description: "12 personalised cupcakes",
@@ -127,6 +143,7 @@ let products =
             
                     },
                     {
+                        id: 16,
                         productName: "Valentines Vintage Heart Cake",
                         category: "Vintage Heart",
                         description: "Heart shaped vintage cakes",
@@ -135,6 +152,7 @@ let products =
             
                     },
                     {
+                        id: 17,
                         productName: "Pink Vintage Heart Cake",
                         category: "Vintage Heart",
                         description: "Heart shaped vintage cakes",
@@ -143,6 +161,7 @@ let products =
             
                     },
                     {
+                        id: 18,
                         productName: "TwentyFirst Vintage Heart Cake",
                         category: "Vintage Heart",
                         description: "Heart shaped vintage cakes",
@@ -151,6 +170,7 @@ let products =
             
                     },
                     {
+                        id: 19,
                         productName: "Colorful Personalised Heart Cake",
                         category: "Vintage Heart",
                         description: "Heart shaped vintage cakes",
@@ -159,6 +179,7 @@ let products =
             
                     },
                     {
+                        id: 20,
                         productName: "Black and White Vintage Heart Cake",
                         category: "Vintage Heart",
                         description: "Heart shaped vintage cakes",
@@ -166,6 +187,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/heart5.jpg"
                     },
                     {
+                        id: 21,
                         productName: "Cocomelon Number Cake",
                         category: "Number",
                         description: "Number cakes created with cupcakes of your choice",
@@ -173,6 +195,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/number1.jpg"
                     },
                     {
+                        id: 22,
                         productName: "Black Pink Number Cake",
                         category: "Number",
                         description: "Number cakes created with cupcakes of your choice",
@@ -180,6 +203,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/number2.jpg"
                     },
                     {
+                        id: 23,
                         productName: "Minecraft Number Cake",
                         category: "Number",
                         description: "Number cakes created with cupcakes of your choice",
@@ -187,6 +211,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/number3.jpg"
                     },
                     {
+                        id: 24,
                         productName: "Rainbow Number Cake",
                         category: "Number",
                         description: "Number cakes created with cupcakes of your choice",
@@ -194,6 +219,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/number4.jpg"
                     },
                     {
+                        id: 25,
                         productName: "Wild Life Number Cake",
                         category: "Number",
                         description: "Number cakes created with cupcakes of your choice",
@@ -201,6 +227,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/number5.jpg"
                     },
                     {
+                        id: 26,
                         productName: "Floral Two Tier Cake",
                         category: "Two Tier",
                         description: "Personalised 2 tier cake",
@@ -208,6 +235,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/tier1.jpg"
                     },
                     {
+                        id: 27,
                         productName: "Floral 70th Two Tier Cake",
                         category: "Two Tier",
                         description: "Personalised 2 tier cake",
@@ -215,6 +243,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/tier2.jpg"
                     },
                     {
+                        id: 28,
                         productName: "Liverpool Two Tier Cake",
                         category: "Two Tier",
                         description: "Personalised 2 tier cake",
@@ -222,6 +251,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/tier3.jpg"
                     },
                     {
+                        id: 29,
                         productName: "Bluey Two Tier Cake",
                         category: "Two Tier",
                         description: "Personalised 2 tier cake",
@@ -229,6 +259,7 @@ let products =
                         img_url: "https://asheekasamuels.github.io/All-Images/images/tier4.jpg"
                     },
                     {
+                        id: 30,
                         productName: "Colorful Daisy Two Tier Cake",
                         category: "Two Tier",
                         description: "Personalised 2 tier cake",
@@ -309,3 +340,15 @@ function addToCart(product) {
 window.onload = () => {
     document.querySelector('[counter]').textContent = checkoutItems.length || 0
 }
+// Search product
+let productSearch = document.querySelector('[data-search-product]');
+productSearch.addEventListener('input', () => {
+    try {
+        let searchItem = products.filter(item => {
+            return item.productName.toLowerCase().includes(productSearch.value.toLowerCase());
+        });
+        displayProducts(searchItem);
+    } catch (e) {
+        alert('Function is under maintenance');
+    }
+});
