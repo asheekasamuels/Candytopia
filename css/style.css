@@ -35,7 +35,7 @@ img {
 }
 /* button */
 .button {
-    background-color: blueviolet;
+    background-color: pink;
     color: white;
     justify-content: center;
 }
@@ -43,7 +43,9 @@ img {
     width: 18rem;
     & img {
         object-fit: contain;
-        padding-block: .2rem;
+        padding-block: .0rem;
+        object-position: center;
+        object-fit: cover;
     }
     & .card-body {
         display: grid;
@@ -121,9 +123,122 @@ img {
     justify-content: center;
     align-items: center;
     color: #fff;
-    background-color: #3a5a40;
+    background-color: pink;
     border: none;
     padding: 5px;
     border-radius: 15px;
 }
 /* end of checkout page */
+
+/* footer */
+footer {
+    background-color: #ffdbe9;
+    padding: 20px 0;
+    text-align: center;
+    color: black !important;
+    width: 100%;
+}
+
+.card1 {
+    width: 60px;
+    height: 60px;
+    outline: none;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 90px 5px 5px 5px;
+    transition: .2s ease-in-out;
+}
+
+.instagram {
+    margin-top: 0.8em;
+    margin-left: 0.6em;
+    fill: black;
+}
+
+.card2 {
+    width: 60px;
+    height: 60px;
+    outline: none;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px 90px 5px 5px;
+    transition: .2s ease-in-out;
+}
+
+.facebook {
+    margin-top: 0.8em;
+    margin-left: -.5em;
+    fill: black !important;
+}
+
+.card3 {
+    width: 60px;
+    height: 60px;
+    outline: none;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px 5px 5px 90px;
+    transition: .2s ease-in-out;
+}
+
+.github {
+    margin-top: -.4em;
+    margin-left: 0.8em;
+    fill: black;
+}
+
+.card4 {
+    width: 60px;
+    height: 60px;
+    outline: none;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px 5px 90px 5px;
+    transition: .2s ease-in-out;
+}
+
+.linkedin {
+    margin-top: -.6em;
+    margin-left: -0.6em;
+    fill: black;
+}
+
+.card1:hover {
+    cursor: pointer;
+    scale: 1.1;
+
+}
+
+.card1:hover .instagram {
+    fill: black;
+}
+
+.card2:hover {
+    cursor: pointer;
+    scale: 1.1;
+
+}
+
+.card2:hover .twitter {
+    fill: black;
+}
+
+.card3:hover {
+    cursor: pointer;
+    scale: 1.1;
+
+}
+
+.card3:hover .github {
+    fill: black;
+}
+
+.card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+
+}
+
+.card4:hover .discord {
+    fill: black;
+}
