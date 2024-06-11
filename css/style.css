@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: cursive;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -75,6 +76,7 @@ img {
     color: white;
 
 }
+/* end of home page */
 
 /* ABOUT PAGE */
 .container-fluid3 {
@@ -130,7 +132,48 @@ img {
 }
 /* end of checkout page */
 
-/* footer */
+/* START OF CONTACT FORM */
+
+.container-fluid4{
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    font-family: cursive;
+    color: white;
+}
+
+.contact {
+    font-family: cursive;
+    background-color: #ffdbe9;
+    color: black;
+    width: 70%;
+    left: 15%;
+}
+
+.contact .heading-text {
+    background-color: pink;
+}
+.submit,
+.reset {
+  color: #b20600;
+  border: 2px solid #b20600;
+  margin-left: 5px;
+  margin-right: 5px;
+  --bg: #000;
+  transition: 0.2s;
+}
+.submit:hover,
+.reset:hover {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  background: #b20600 !important;
+  color: white !important;
+  border: 2px solid #b20600;
+}
+/* end of contact form */
+
+/* START OF FOOTER*/
 footer {
     background-color: #ffdbe9;
     padding: 20px 0;
@@ -242,3 +285,4 @@ footer {
 .card4:hover .discord {
     fill: black;
 }
+/* end of footer */
