@@ -173,6 +173,85 @@ img {
 }
 /* end of contact form */
 
+/* START OF ADMIN PAGE */
+.container-fluid5{
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    font-family: cursive;
+    color: white;
+}
+
+.heading,
+table,
+label,
+input {
+  color: black;
+}
+#inputs {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+label {
+  padding-right: 5px;
+}
+input {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+::placeholder {
+  color: white;
+}
+.addButton,
+.delBtn {
+  margin-left: 5px;
+  background: pink !important;
+  color: white !important;
+  border-color: black !important;
+  --bg: #000;
+  transition: 0.2s;
+}
+.addButton:hover,
+.delBtn:hover {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  background: black !important;
+  color: white !important;
+  border: 2px solid white;
+}
+
+table {
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr,
+th,
+td {
+  border: 2px solid white;
+}
+
+.rows {
+  height: 150px;
+}
+.table-img {
+  height: 130px;
+  width: 130px;
+}
+#table {
+  margin-bottom: 20px;
+}
+/* end of admin page */
+
 /* START OF FOOTER*/
 footer {
     background-color: #ffdbe9;
