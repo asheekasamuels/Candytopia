@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Rubik Doodle Shadow;
+    font-family: "Emilys Candy";
 }
 ::-webkit-scrollbar {
     display: none;
@@ -73,7 +73,6 @@ img {
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    font-family: cursive;
     color: white;
 
 }
@@ -89,7 +88,6 @@ img {
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
-    font-family: cursive;
     color: white;
 
 }
@@ -131,7 +129,6 @@ img {
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    font-family: Rubik Doodle Shadow;
     color: white;
 
 }
@@ -165,7 +162,6 @@ img {
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    font-family: cursive;
     color: white;
 }
 .btn{
@@ -186,12 +182,10 @@ img {
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    font-family: cursive;
     color: white;
 }
 
 .contact {
-    font-family: cursive;
     background-color: transparent;
     color: black;
     width: 70%;
@@ -226,7 +220,6 @@ img {
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    font-family: cursive;
     color: white;
 }
 
