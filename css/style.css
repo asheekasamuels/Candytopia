@@ -80,6 +80,11 @@ img {
     background: transparent;
     text-align: center;
 }
+.container-fluid1 {
+    @media screen and (max-width: 300px) {
+        min-height: 700px;
+    }
+}
 /* end of home page */
 
 /* ABOUT PAGE */
@@ -119,6 +124,12 @@ img {
 .p2 {
     font-family:  'Lora', serif;
 }
+
+.container-fluid3 {
+    @media screen and (max-width: 300px) {
+        min-height: 700px;
+    }
+}
 /* end of about page */
 
 /* Checkout page */
@@ -152,6 +163,11 @@ img {
     padding: 5px;
     border-radius: 15px;
 }
+.container-fluid6 {
+    @media screen and (max-width: 300px) {
+        min-height: 700px;
+    }
+}
 /* end of checkout page */
 
 /* PRODUCTS PAGE */
@@ -175,7 +191,11 @@ img {
     background: transparent;
     color: white;
 }
-
+.container-fluidP {
+    @media screen and (max-width: 300px) {
+        min-height: 700px;
+    }
+}
 /* START OF CONTACT FORM */
 
 .container-fluid4{
@@ -212,6 +232,11 @@ img {
   background: pink!important;
   color: white !important;
   border: 2px solid white;
+}
+.container-fluid4 {
+    @media screen and (max-width: 300px) {
+        min-height: 700px;
+    }
 }
 /* end of contact form */
 
@@ -293,6 +318,11 @@ td {
 }
 #table {
   margin-bottom: 20px;
+}
+.container-fluid5 {
+    @media screen and (max-width: 300px) {
+        min-height: 700px;
+    }
 }
 /* end of admin page */
 
