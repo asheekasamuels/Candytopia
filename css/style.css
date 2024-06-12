@@ -19,7 +19,7 @@
 }
 /* navbar */
 .navbar {
-    background-color: #FFE4CF;
+    background-color: pink;
     & img[alt='logo'] {
         width: 5rem;
     }
@@ -328,7 +328,7 @@ td {
 
 /* START OF FOOTER*/
 footer {
-    background-color: #FFE4CF;
+    background-color: pink;
     padding: 20px 0;
     text-align: center;
     color: black !important;
