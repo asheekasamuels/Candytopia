@@ -1,5 +1,5 @@
-// current year
-document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
+// Current year
+document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear();
 
 let items = [];
 let admin = JSON.parse(localStorage.getItem("Items")) || [];
@@ -15,21 +15,23 @@ function addtoTable() {
   items.push(outfit);
 
   let table = document.querySelector("tbody");
-  localStorage.setItem("Items", JSON.stringify(admin));
+  localStorage.setItem("Items", JSON.stringify(items));
   table.innerHTML = "";
-  items.forEach((data) => {
+  items.forEach((data, index) => {
     table.innerHTML += `
         <tr class="rows">
         <td>${data.name}</td>
         <td class="img-data"><img src="${data.image}" class="table-img"></td>
         <td>R ${data.price}</td>
         <td>${data.category}</td>
-        <td><button id="deleteButton()" class="delBtn btn">Delete</button></td>
+        <td><button class="delBtn btn" onclick="deleteItem(${index})">Delete</button></td> <!-- Call deleteItem with index -->
         </tr>
         `;
   });
 }
 
-function deleteButton() {
-  addtoTable() = ""
+function deleteItem(index) {
+  items.splice(index, 1);
+  localStorage.setItem("Items", JSON.stringify(items)); 
+  addtoTable();
 }

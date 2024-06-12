@@ -27,7 +27,7 @@ function cartItems() {
         let total = amount * quantity;
         tableContent +=
             `<tr>
-                <td><img src="${product.image}" alt="${product.productName}" /></td>
+                <td><img src="${product.img_url}" alt="${product.productName}" style="max-width: 100px; max-height: 100px;"/></td>
                 <td>${product.productName}</td>
                 <td>${quantity}</td>
                 <td>${amount}</td>
@@ -53,3 +53,7 @@ function productPayment() {
     alert('Payment Successful');
     location.reload();
 }
+
+// Event listeners
+document.querySelector('.purchaseButton').addEventListener('click', productPayment);
+document.querySelector('.clearButton').addEventListener('click', clearProducts);
