@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Emilys Candy";
+    text-align: center;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -207,6 +208,7 @@ img {
 }
 
 .contact {
+    align-items: center;
     background-color: transparent;
     color: black;
     width: 70%;
@@ -224,6 +226,7 @@ img {
   margin-right: 5px;
   --bg: #000;
   transition: 0.2s;
+  align-items: center;
 }
 .submit:hover,
 .reset:hover {
