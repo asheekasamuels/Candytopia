@@ -19,7 +19,7 @@
 }
 /* navbar */
 .navbar {
-    background-color: #74512D;
+    background-color: #FFE4CF;
     & img[alt='logo'] {
         width: 5rem;
     }
@@ -69,7 +69,7 @@ img {
     min-height: 89.8vh;
     display: grid;
     place-items: center;
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -77,11 +77,15 @@ img {
     color: white;
 
 }
+.card{
+    background: transparent;
+    text-align: center;
+}
 /* end of home page */
 
 /* ABOUT PAGE */
 .container-fluid3 {
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
@@ -102,9 +106,9 @@ img {
 #box1 {
     margin-top: 25px;
     width: 300px;
-    background-color: #AF8F6F;
+    background-color: transparent;
     color: white;
-    box-shadow: 0 0 20px 0 #74512D;
+    box-shadow: 0 0 20px 0 pink;
     border-radius: 15px;
     padding: 10px;
     text-decoration: none;
@@ -123,7 +127,7 @@ img {
 .container-fluid6 {
     min-height: 89.8vh;
     place-items: center;
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -136,8 +140,19 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    background-color: pink;
+    color: white;
+    background-color: #AF8F6F;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+}
+.clearButton{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #AF8F6F;
     border: none;
     padding: 5px;
     border-radius: 15px;
@@ -146,18 +161,28 @@ img {
 
 /* PRODUCTS PAGE */
 .container-fluidP{
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     font-family: cursive;
     color: white;
 }
+.btn{
+    background-color: lightblue;
+}
+.card{
+    box-shadow: 0 0 20px 0 pink;
+    border-radius: 15px;
+    padding: 10px;
+    background: transparent;
+    color: white;
+}
 
 /* START OF CONTACT FORM */
 
 .container-fluid4{
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -167,7 +192,7 @@ img {
 
 .contact {
     font-family: cursive;
-    background-color: #74512D;
+    background-color: transparent;
     color: black;
     width: 70%;
     left: 15%;
@@ -178,8 +203,8 @@ img {
 }
 .submit,
 .reset {
-  color: #b20600;
-  border: 2px solid #b20600;
+  color: white;
+  border: 2px solid white;
   margin-left: 5px;
   margin-right: 5px;
   --bg: #000;
@@ -189,15 +214,15 @@ img {
 .reset:hover {
   transform: translate(-0.25rem, -0.25rem);
   box-shadow: 0.25rem 0.25rem var(--bg);
-  background: #b20600 !important;
+  background: pink!important;
   color: white !important;
-  border: 2px solid #b20600;
+  border: 2px solid white;
 }
 /* end of contact form */
 
 /* START OF ADMIN PAGE */
 .container-fluid5{
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -207,9 +232,12 @@ img {
 
 .heading,
 table,
-label,
-input {
+label {
   color: white;
+}
+
+.input {
+    color:black;
 }
 #inputs {
   margin-bottom: 20px;
@@ -276,10 +304,10 @@ td {
 
 /* START OF FOOTER*/
 footer {
-    background-color: #74512D;
+    background-color: #FFE4CF;
     padding: 20px 0;
     text-align: center;
-    color: white !important;
+    color: black !important;
     width: 100%;
 }
 
@@ -328,7 +356,7 @@ footer {
 .github {
     margin-top: -.4em;
     margin-left: 0.8em;
-    fill: black;
+    fill: white;
 }
 
 .card4 {
