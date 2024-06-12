@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive;
+    font-family: Rubik Doodle Shadow;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -19,10 +19,11 @@
 }
 /* navbar */
 .navbar {
-    background-color: #ffdbe9;
+    background-color: #74512D;
     & img[alt='logo'] {
         width: 5rem;
     }
+    
 }
 /* All the images */
 img {
@@ -68,10 +69,10 @@ img {
     min-height: 89.8vh;
     display: grid;
     place-items: center;
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
     background-size: cover;
     background-position: center;
-    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     font-family: cursive;
     color: white;
 
@@ -80,10 +81,10 @@ img {
 
 /* ABOUT PAGE */
 .container-fluid3 {
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
     background-size: cover;
     background-position: center;
-    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
     font-family: cursive;
     color: white;
 
@@ -101,9 +102,9 @@ img {
 #box1 {
     margin-top: 25px;
     width: 300px;
-    background-color: lightpink;
+    background-color: #AF8F6F;
     color: white;
-    box-shadow: 0 0 20px 0 palevioletred;
+    box-shadow: 0 0 20px 0 #74512D;
     border-radius: 15px;
     padding: 10px;
     text-decoration: none;
@@ -122,11 +123,11 @@ img {
 .container-fluid6 {
     min-height: 89.8vh;
     place-items: center;
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
     background-size: cover;
     background-position: center;
-    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-    font-family: cursive;
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    font-family: Rubik Doodle Shadow;
     color: white;
 
 }
@@ -143,20 +144,30 @@ img {
 }
 /* end of checkout page */
 
+/* PRODUCTS PAGE */
+.container-fluidP{
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    font-family: cursive;
+    color: white;
+}
+
 /* START OF CONTACT FORM */
 
 .container-fluid4{
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
     background-size: cover;
     background-position: center;
-    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     font-family: cursive;
     color: white;
 }
 
 .contact {
     font-family: cursive;
-    background-color: #ffdbe9;
+    background-color: #74512D;
     color: black;
     width: 70%;
     left: 15%;
@@ -186,10 +197,10 @@ img {
 
 /* START OF ADMIN PAGE */
 .container-fluid5{
-    background-image: url(https://asheekasamuels.github.io/All-Images/images/IMG_3200.jpg);
+    background-image: url(https://asheekasamuels.github.io/All-Images/images/backdrop1.jpg);
     background-size: cover;
     background-position: center;
-    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     font-family: cursive;
     color: white;
 }
@@ -198,7 +209,7 @@ img {
 table,
 label,
 input {
-  color: black;
+  color: white;
 }
 #inputs {
   margin-bottom: 20px;
@@ -222,9 +233,9 @@ input {
 .addButton,
 .delBtn {
   margin-left: 5px;
-  background: pink !important;
-  color: white !important;
-  border-color: black !important;
+  background: white;
+  color: black;
+  border-color: black;
   --bg: #000;
   transition: 0.2s;
 }
@@ -232,8 +243,8 @@ input {
 .delBtn:hover {
   transform: translate(-0.25rem, -0.25rem);
   box-shadow: 0.25rem 0.25rem var(--bg);
-  background: black !important;
-  color: white !important;
+  background: black;
+  color: white;
   border: 2px solid white;
 }
 
@@ -265,10 +276,10 @@ td {
 
 /* START OF FOOTER*/
 footer {
-    background-color: #ffdbe9;
+    background-color: #74512D;
     padding: 20px 0;
     text-align: center;
-    color: black !important;
+    color: white !important;
     width: 100%;
 }
 

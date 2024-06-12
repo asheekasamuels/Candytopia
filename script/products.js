@@ -100,12 +100,11 @@ let products =
                     {
                         id: 11,
                         productName: "Bluey Cupcakes",
-                        categor: "Cupcake",
+                        category: "Cupcake",
                         description: "12 personalised cupcakes",
                         amount: 150.00,
                         img_url: "https://asheekasamuels.github.io/All-Images/images/cupcake1.jpg"
-            
-                    },
+                    },                    
                     {
                         id: 12,
                         productName: "Real Madrid Cupcakes",
@@ -272,17 +271,19 @@ let products =
 // Current year
 document.querySelector('[currentYear]').textContent =
     new Date().getUTCFullYear();
-function recentProducts() {
+
+function recentProducts(products) {
     try {
+        wrapper.innerHTML = ''; // Clear the wrapper
         products.forEach(product => {
             wrapper.innerHTML += `
                 <div class="card">
-                    <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
+                    <img src="${product.img_url}" class="card-img-top" alt="${product.id}" loading='lazy'>
                     <div class="card-body">
                         <h5 class="card-title">${product.productName}</h5>
                         <p class="card-text">${product.description}</p>
                         <p class="card-text">${product.amount}</p>
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
                     </div>
                 </div>
             `;
@@ -294,52 +295,9 @@ function recentProducts() {
         }, 2000);
     }
 }
-recentProducts();
-// keyup
-searchProduct.addEventListener('keyup', () => {
-    try {
-        if (searchProduct.value.length < 1) {
-            displayProducts(products)
-        }
-        let filteredProduct = products.filter(product => product.productName.toLowerCase().includes(searchProduct.value))
-        displayProducts(filteredProduct)
-        if (!filteredProduct.length) throw new Error(`${searchProduct.value} product was not found`)
-    } catch (e) {
-        container.textContent = e.message || 'Please try again later'
-    }
-})
-// Sorting by ascending and descending
-let isToggle = false
-sortingByAmount.addEventListener('click', () => {
-    try {
-        if (!products) throw new Error('Please try again later')
-        if (!isToggle) {
-            products.sort((a, b) => b.amount - a.amount)
-            sortingByAmount.textContent = 'Sorted by highest amount'
-            isToggle = true
-        } else {
-            products.sort((a, b) => a.amount - b.amount)
-            sortingByAmount.textContent = 'Sorted by lowest amount'
-            isToggle = false
-        }
-        displayProducts(products)
-    } catch (e) {
-        container.textContent = e.message || 'We are working on this issue'
-    }
-})
-// Add to cart
-function addToCart(product) {
-    try {
-        checkoutItems.push(product)
-        localStorage.setItem('checkout', JSON.stringify(checkoutItems))
-        document.querySelector('[counter]').textContent = checkoutItems.length || 0
-    } catch (e) {
-        alert("Unable to add to cart")
-    }
-}
-window.onload = () => {
-    document.querySelector('[counter]').textContent = checkoutItems.length || 0
-}
+
+recentProducts(products);
+
 // Search product
 let productSearch = document.querySelector('[data-search-product]');
 productSearch.addEventListener('input', () => {
@@ -347,8 +305,41 @@ productSearch.addEventListener('input', () => {
         let searchItem = products.filter(item => {
             return item.productName.toLowerCase().includes(productSearch.value.toLowerCase());
         });
-        displayProducts(searchItem);
+        recentProducts(searchItem); // Call recentProducts with filtered items
     } catch (e) {
         alert('Function is under maintenance');
     }
 });
+
+// Sorting by ascending and descending
+let productSort = document.querySelector('[sorting]');
+let highest = false;
+productSort.addEventListener('click', () => {
+    try {
+        if (!highest) {
+            products.sort((a, b) => b.amount - a.amount);
+            highest = true;
+        } else {
+            products.sort((a, b) => a.amount - b.amount);
+            highest = false;
+        }
+        recentProducts(products); // Call recentProducts with sorted items
+    } catch (e) {
+        alert('This Function is under maintenance');
+    }
+});
+
+// Add to cart
+let cart = JSON.parse(localStorage.getItem('checkout')) || [];
+function addToCart(product) {
+    try {
+        cart.push(product);
+        localStorage.setItem('checkout', JSON.stringify(cart));
+    } catch (e) {
+        alert('The Checkout is under maintenance');
+    }
+}
+
+window.onload = () => {
+    document.querySelector('[counter]').textContent = cart.length || 0;
+};
