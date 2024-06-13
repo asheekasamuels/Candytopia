@@ -128,12 +128,6 @@ img {
 .p2 {
     font-family:  'Lora', serif;
 }
-@media (min-width: 767px) {
-    .body {
-        max-width: 480px;
-        margin: 0 auto;
-    }
-}
 /* end of about page */
 
 /* Checkout page */
@@ -167,12 +161,6 @@ img {
     padding: 5px;
     border-radius: 15px;
 }
-@media (min-width: 767px) {
-    .body {
-        max-width: 480px;
-        margin: 0 auto;
-    }
-}
 /* end of checkout page */
 
 /* PRODUCTS PAGE */
@@ -196,12 +184,6 @@ img {
     background: transparent;
     color: white;
 }
-@media (min-width: 767px) {
-    .body {
-        max-width: 480px;
-        margin: 0 auto;
-    }
-}
 /* end of products */
 
 /* START OF CONTACT FORM */
@@ -215,11 +197,11 @@ img {
 }
 
 .contact {
-    align-items: center;
+    align-items: left;
     background-color: transparent;
-    color: black;
-    width: 70%;
-    left: 15%;
+    color: white;
+    width: auto;
+    left: auto;
 }
 
 .contact .heading-text {
@@ -246,12 +228,6 @@ img {
 .container-fluid4 {
     @media screen and (max-width: 300px) {
         min-height: 700px;
-    }
-}
-@media (min-width: 767px) {
-    .body {
-        max-width: 480px;
-        margin: 0 auto;
     }
 }
 /* end of contact form */
@@ -311,35 +287,6 @@ img {
     height: 130px;
     width: 130px;
   }
-  
-  @media (max-width: 768px) {
-    #inputs label,
-    #inputs input {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    #inputs input {
-      width: calc(100% - 20px);
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .img-head {
-      display: none;
-    }
-  
-    thead th,
-    tbody td {
-      font-size: 14px;
-    }
-  
-    .display-2 {
-      font-size: 24px;
-    }
-  }
-  
 /* end of admin page */
 
 /* START OF FOOTER*/
@@ -454,11 +401,5 @@ footer {
 
 .card4:hover .discord {
     fill: black;
-}
-@media (min-width: 767px) {
-    .body {
-        max-width: 480px;
-        margin: 0 auto;
-    }
 }
 /* end of footer */
