@@ -1,62 +1,99 @@
-// Current year
-document.querySelector('[currentYear]').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYearElement = document.querySelector('[currentYear]');
+    currentYearElement.textContent = new Date().getFullYear();
 
-// Getting cart items from localStorage
-let cart = JSON.parse(localStorage.getItem('checkout')) || [];
-let checkoutTable = document.querySelector('[table-checkout]');
+    let cart = JSON.parse(localStorage.getItem('checkout')) || [];
+    let checkoutTable = document.querySelector('[table-checkout]');
+    let productsWrapper = document.querySelector('[table-checkout]');
+    let purchaseButton = document.querySelector('.purchaseButton');
+    let clearButton = document.querySelector('.clearButton');
 
-// Displaying cart items
-function cartItems() {
-    if (cart.length === 0) {
-        checkoutTable.innerHTML = "<tr><td colspan='4'>Add items to your cart</td></tr>";
-        return;
-    }
-    let cartProducts = cart.reduce((groupedItems, item) => {
-        if (!groupedItems[item.id]) {
-            groupedItems[item.id] = [];
+    function displayCartItems() {
+        if (cart.length === 0) {
+            productsWrapper.innerHTML = `
+                <div class="col">
+                    <div class="spinner-border" role="status"></div>
+                    <p>No items found</p>
+                </div>`;
+            return;
         }
-        groupedItems[item.id].push(item);
-        return groupedItems;
-    }, {});
-    let tableContent = "";
-    for (let id in cartProducts) {
-        let productGroup = cartProducts[id];
-        let product = productGroup[0];
-        let quantity = productGroup.length;
-        let amount = product.amount;
-        let total = amount * quantity;
-        tableContent +=
-            `<tr>
-                <td><img src="${product.img_url}" alt="${product.productName}" style="max-width: 100px; max-height: 100px;"/></td>
-                <td>${product.productName}</td>
-                <td>${quantity}</td>
-                <td>${amount}</td>
-                <td>${total}</td>
-            </tr>`;
+
+        let cartProducts = cart.reduce((groupedItems, item) => {
+            if (!groupedItems[item.id]) {
+                groupedItems[item.id] = [];
+            }
+            groupedItems[item.id].push(item);
+            return groupedItems;
+        }, {});
+
+        let tableContent = "";
+        for (let id in cartProducts) {
+            let productGroup = cartProducts[id];
+            let product = productGroup[0];
+            let quantity = productGroup.length;
+            let amount = product.amount;
+            let total = amount * quantity;
+            tableContent +=
+                `<tr>
+                    <td><img src="${product.img_url}" alt="${product.productName}" style="max-width: 100px; max-height: 100px;"/></td>
+                    <td>${product.productName}</td>
+                    <td>${quantity}</td>
+                    <td>${amount}</td>
+                    <td>${total}</td>
+                </tr>`;
+        }
+        checkoutTable.innerHTML = tableContent;
     }
-    checkoutTable.innerHTML = tableContent;
-}
 
-cartItems();
+    function displayProducts() {
+        productsWrapper.innerHTML = '';
+        if (cart.length > 0) {
+            cart.forEach((product, i) => {
+                productsWrapper.innerHTML += `
+                    <tr>
+                        <th scope="row"><img src="${product.image}"></th>
+                        <td>${product.name}</td>
+                        <td value="${product.quantity}" class="quantity-input"></td> 
+                        <td>R${product.price}</td>
+                    </tr>`;
+            });
+        } else {
+            productsWrapper.innerHTML = `
+                <div class="col">
+                    <div class="spinner-border" role="status"></div>
+                    <p>No items found</p>
+                </div>`;
+        }
+    }
 
-// Clearing the cart
-function clearProducts() {
-    localStorage.removeItem('checkout');
-    alert('Items removed from your cart');
-    cart = []; // Empty the cart array
-    cartItems(); // Update the cart display
-}
+    function removePurchase() {
+        localStorage.removeItem('checkout');
+        cart = [];
+        displayCartItems();
+    }
 
-// Processing payment
-function productPayment() {
-    localStorage.removeItem('checkout');
-    alert('Payment Successful');
-    location.reload();
-}
+    purchaseButton.addEventListener('click', () => {
+        if (cart.length > 0) {
+            alert('Payment Successful');
+            removePurchase();
+        } else {
+            alert('Your cart is empty.');
+        }
+    });
 
-// Event listeners
-document.querySelector('.purchaseButton').addEventListener('click', productPayment);
-document.querySelector('.clearButton').addEventListener('click', clearProducts);
+    clearButton.addEventListener('click', () => {
+        if (cart.length > 0) {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                removePurchase();
+            }
+        } else {
+            alert('Your cart is already empty.');
+        }
+    });
+
+    displayCartItems();
+    displayProducts();
+});
 
 window.onload = () => {
     document.querySelector('[counter]').textContent = cart.length || 0;

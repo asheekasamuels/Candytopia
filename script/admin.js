@@ -137,3 +137,7 @@ adminSavedProduct.addEventListener('click', () => {
         alert('Unable to Add new product');
     }
 });
+
+window.onload = () => {
+    document.querySelector('[counter]').textContent = cart.length || 0;
+};
