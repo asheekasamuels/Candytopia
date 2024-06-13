@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Emilys Candy";
+    font-size: medium;
     text-align: center;
 }
 ::-webkit-scrollbar {
@@ -264,82 +265,81 @@ img {
     color: white;
 }
 
-.heading,
-table,
-label {
-  color: white;
-}
-
-.input {
-    color:black;
-}
 #inputs {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-}
-label {
-  padding-right: 5px;
-}
-input {
-  border: 1px solid black;
-  border-radius: 10px;
-  margin-right: 10px;
-  margin-left: 5px;
-}
-
-::placeholder {
-  color: white;
-}
-.addButton,
-.delBtn {
-  margin-left: 5px;
-  background: white;
-  color: black;
-  border-color: black;
-  --bg: #000;
-  transition: 0.2s;
-}
-.addButton:hover,
-.delBtn:hover {
-  transform: translate(-0.25rem, -0.25rem);
-  box-shadow: 0.25rem 0.25rem var(--bg);
-  background: black;
-  color: white;
-  border: 2px solid white;
-}
-
-table {
-  width: 80%;
-  margin-bottom: 20px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-tr,
-th,
-td {
-  border: 2px solid white;
-}
-
-.rows {
-  height: 150px;
-}
-.table-img {
-  height: 130px;
-  width: 130px;
-}
-#table {
-  margin-bottom: 20px;
-}
-@media (min-width: 767px) {
-    .body {
-        max-width: 480px;
-        margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  #inputs label {
+    margin-right: 10px;
+  }
+  
+  #inputs input {
+    margin-right: 10px;
+  }
+  
+  .addButton {
+    margin-top: 10px;
+  }
+  
+  .container-fluid5 {
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead th,
+  tbody td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  thead th {
+    background-color: pink;
+  }
+  
+  tbody td {
+    border-top: 1px solid #ddd;
+  }
+  
+  .img-head {
+    width: 100%;
+  }
+  .table-img {
+    height: 130px;
+    width: 130px;
+  }
+  
+  @media (max-width: 768px) {
+    #inputs label,
+    #inputs input {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
     }
-}
+  
+    #inputs input {
+      width: calc(100% - 20px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .img-head {
+      display: none;
+    }
+  
+    thead th,
+    tbody td {
+      font-size: 14px;
+    }
+  
+    .display-2 {
+      font-size: 24px;
+    }
+  }
+  
 /* end of admin page */
 
 /* START OF FOOTER*/
