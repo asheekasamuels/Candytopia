@@ -25,6 +25,7 @@ function recentProducts() {
         )
     }
 }
+
 // Counter
 window.onload = () => {
     document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
