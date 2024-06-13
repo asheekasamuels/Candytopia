@@ -57,3 +57,7 @@ function productPayment() {
 // Event listeners
 document.querySelector('.purchaseButton').addEventListener('click', productPayment);
 document.querySelector('.clearButton').addEventListener('click', clearProducts);
+
+window.onload = () => {
+    document.querySelector('[counter]').textContent = cart.length || 0;
+};

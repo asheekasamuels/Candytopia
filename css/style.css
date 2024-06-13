@@ -81,9 +81,11 @@ img {
     background: transparent;
     text-align: center;
 }
-.container-fluid1 {
-    @media screen and (max-width: 300px) {
-        min-height: 700px;
+
+@media (min-width: 767px) {
+    .body {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
 /* end of home page */
@@ -125,10 +127,10 @@ img {
 .p2 {
     font-family:  'Lora', serif;
 }
-
-.container-fluid3 {
-    @media screen and (max-width: 300px) {
-        min-height: 700px;
+@media (min-width: 767px) {
+    .body {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
 /* end of about page */
@@ -164,9 +166,10 @@ img {
     padding: 5px;
     border-radius: 15px;
 }
-.container-fluid6 {
-    @media screen and (max-width: 300px) {
-        min-height: 700px;
+@media (min-width: 767px) {
+    .body {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
 /* end of checkout page */
@@ -192,11 +195,14 @@ img {
     background: transparent;
     color: white;
 }
-.container-fluidP {
-    @media screen and (max-width: 300px) {
-        min-height: 700px;
+@media (min-width: 767px) {
+    .body {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
+/* end of products */
+
 /* START OF CONTACT FORM */
 
 .container-fluid4{
@@ -239,6 +245,12 @@ img {
 .container-fluid4 {
     @media screen and (max-width: 300px) {
         min-height: 700px;
+    }
+}
+@media (min-width: 767px) {
+    .body {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
 /* end of contact form */
@@ -322,9 +334,10 @@ td {
 #table {
   margin-bottom: 20px;
 }
-.container-fluid5 {
-    @media screen and (max-width: 300px) {
-        min-height: 700px;
+@media (min-width: 767px) {
+    .body {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
 /* end of admin page */
@@ -440,5 +453,11 @@ footer {
 
 .card4:hover .discord {
     fill: black;
+}
+@media (min-width: 767px) {
+    .body {
+        max-width: 480px;
+        margin: 0 auto;
+    }
 }
 /* end of footer */

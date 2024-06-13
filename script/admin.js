@@ -35,3 +35,7 @@ function deleteItem(index) {
   localStorage.setItem("Items", JSON.stringify(items)); 
   addtoTable();
 }
+
+window.onload = () => {
+  document.querySelector('[counter]').textContent = cart.length || 0;
+};
