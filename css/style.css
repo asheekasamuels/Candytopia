@@ -11,6 +11,7 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
 /* display -> grid */
 :is(body, .card) {
     display: grid;
@@ -81,6 +82,8 @@ img {
 .card{
     background: transparent;
     text-align: center;
+    margin: auto;
+
 }
 
 @media (min-width: 767px) {
@@ -128,6 +131,21 @@ img {
 .p2 {
     font-family:  'Lora', serif;
 }
+@media only screen and (max-width:767px) {
+    .container3{
+        flex-direction: column;
+        width:100%;
+        margin:10px;
+    }
+    #box1 {
+        width: 100%;
+        margin: 10px;
+        height: auto;
+    }
+    #head3 {
+        padding-top: 20px;
+    }
+}
 /* end of about page */
 
 /* Checkout page */
@@ -161,6 +179,14 @@ img {
     padding: 5px;
     border-radius: 15px;
 }
+@media only screen and (max-width:767px) {
+    .purchaseButton{
+        font-size: 12px;
+    }
+    .clearButton{
+        font-size: 12px;
+        }
+    }
 /* end of checkout page */
 
 /* PRODUCTS PAGE */
@@ -184,6 +210,17 @@ img {
     background: transparent;
     color: white;
 }
+@media only screen and (max-width:767px) {
+    .btn {
+        font-size: 12px;
+    }
+    .card{
+        flex-direction: column;
+        width:100%;
+        margin:10px;
+    }
+}
+        
 /* end of products */
 
 /* START OF CONTACT FORM */
@@ -228,9 +265,15 @@ img {
   color: white !important;
   border: 2px solid white;
 }
-.container-fluid4 {
-    @media screen and (max-width: 300px) {
-        min-height: 700px;
+@media only screen and (max-width:767px) {
+    .contact {
+        align-items: center;
+    }
+    .heading-text{
+        font-size: 1.5rem;
+    }
+    .submit, .reset{
+        font-size: 1.2rem;
     }
 }
 /* end of contact form */
@@ -290,7 +333,20 @@ img {
     height: 130px;
     width: 130px;
   }
+  @media only screen and (max-width:767px) {
+    #inputs, #inputs label, #inputs input,
+    .addButton, table, thead th, tbody td {
+        flex-direction: column;
+        width:100%;
+        margin:10px;
+        height:auto;    
+    }
+}
 /* end of admin page */
+
+@media (width <769px){
+    
+}
 
 /* START OF FOOTER*/
 footer {
