@@ -76,20 +76,21 @@ img {
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     color: white;
-
 }
-.card{
+
+.card {
     background: transparent;
     text-align: center;
 }
 
-.container{
+.container {
     display: grid;
     margin-left: 15px;
 }
+
 @media (max-width: 768px) {
     .container-fluid1 {
-        min-height: auto;
+        min-height: auto; /* Adjust as needed */
     }
     .container {
         margin-left: 0;
@@ -103,6 +104,8 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+
 /* end of home page */
 
 /* ABOUT PAGE */
@@ -216,7 +219,7 @@ img {
 /* end of checkout page */
 
 /* PRODUCTS PAGE */
-.container-fluidP{
+.container-fluidP {
     background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
@@ -226,10 +229,12 @@ img {
     place-items: center;
     min-height: 89.8vh;
 }
-.btn{
+
+.btn {
     background-color: lightblue;
 }
-.card{
+
+.card {
     box-shadow: 0 0 20px 0 pink;
     border-radius: 15px;
     padding: 10px;
@@ -237,8 +242,33 @@ img {
     color: white;
 }
 
+@media (max-width: 768px) {
+    .container-fluidP {
+        min-height: auto; /* Adjust as needed */
+    }
+    .container-fluidP {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluidP {
+        min-height: auto; /* Adjust as needed */
+    }
+    .container-fluidP {
+        padding: 10px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .card {
+        padding: 8px;
+    }
+}
+
 /* START OF CONTACT FORM */
-.container-fluid4{
+.container-fluid4 {
     background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
@@ -257,24 +287,41 @@ img {
 .contact .heading-text {
     background-color: pink;
 }
+
 .submit,
 .reset {
-  color: white;
-  border: 2px solid white;
-  margin-left: 5px;
-  margin-right: 5px;
-  --bg: #000;
-  transition: 0.2s;
-  align-items: center;
+    color: white;
+    border: 2px solid white;
+    margin-left: 5px;
+    margin-right: 5px;
+    --bg: #000;
+    transition: 0.2s;
+    align-items: center;
 }
+
 .submit:hover,
 .reset:hover {
-  transform: translate(-0.25rem, -0.25rem);
-  box-shadow: 0.25rem 0.25rem var(--bg);
-  background: pink!important;
-  color: white !important;
-  border: 2px solid white;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+    background: pink!important;
+    color: white !important;
+    border: 2px solid white;
 }
+
+@media (max-width: 768px) {
+    .contact {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .submit,
+    .reset {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
 /* end of contact form */
 
 /* START OF ADMIN PAGE */
