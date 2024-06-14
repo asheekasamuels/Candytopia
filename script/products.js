@@ -121,13 +121,15 @@ function recentProducts(products) {
                 </div>
             `;
         });
-    } catch (e) {
-        wrapper.textContent = "Please contact our administrator";
-        setTimeout(() => {
-            location.reload();
-        }, 2000);
+    }catch (e) {
+            tableContent.innerHTML = `
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status"></div>
+                <p>No Products Found</p>
+            </div>
+            `;
+        }
     }
-}
 
 recentProducts(products);
 
@@ -140,7 +142,12 @@ productSearch.addEventListener('input', () => {
         });
         recentProducts(searchItem); // Call recentProducts with filtered items
     } catch (e) {
-        alert('Function is under maintenance');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 });
 
@@ -158,7 +165,12 @@ productSort.addEventListener('click', () => {
         }
         recentProducts(products); // Call recentProducts with sorted items
     } catch (e) {
-        alert('This Function is under maintenance');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 });
 
@@ -170,7 +182,12 @@ function addToCart(product) {
         localStorage.setItem('checkout', JSON.stringify(cart));
         document.querySelector('[counter]').textContent = cart.length || 0;
     } catch (e) {
-        alert('The Checkout is under maintenance');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 }
 
