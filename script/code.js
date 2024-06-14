@@ -17,13 +17,14 @@ function recentProducts() {
     `
         })
     } catch (e) {
-        wrapper.textContent = "Please contact our administrator"
-        setTimeout(() => {
-            location.reload()
-        },
-            2000
-        )
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
+    return 2000
 }
 
 // Counter

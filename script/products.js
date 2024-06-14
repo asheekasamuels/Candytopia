@@ -105,31 +105,35 @@ let products =
 document.querySelector('[currentYear]').textContent =
     new Date().getUTCFullYear();
 
-function recentProducts(products) {
-    try {
-        wrapper.innerHTML = ''; // Clear the wrapper
-        products.forEach(product => {
-            wrapper.innerHTML += `
-                <div class="card">
-                    <img src="${product.img_url}" class="card-img-top" alt="${product.id}" loading='lazy'>
-                    <div class="card-body">
-                        <h5 class="card-title">${product.productName}</h5>
-                        <p class="card-text">${product.description}</p>
-                        <p class="card-text">${product.amount}</p>
-                        <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
+    function recentProducts(products) {
+        try {
+            const wrapper = document.getElementById('wrapper');
+            wrapper.innerHTML = ''; // Clear the wrapper
+            products.forEach(product => {
+                wrapper.innerHTML += `
+                    <div class="card">
+                        <img src="${product.img_url}" class="card-img-top" alt="${product.id}" loading='lazy'>
+                        <div class="card-body">
+                            <h5 class="card-title">${product.productName}</h5>
+                            <p class="card-text">${product.description}</p>
+                            <p class="card-text">${product.amount}</p>
+                            <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
+                        </div>
                     </div>
+                `;
+            });
+        } catch (e) {
+            const tableContent = document.getElementById('table-content');
+            tableContent.innerHTML = `
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status"></div>
+                    <p>No Products Found</p>
                 </div>
             `;
-        });
-    } catch (e) {
-        wrapper.textContent = "Please contact our administrator";
-        setTimeout(() => {
-            location.reload();
-        }, 2000);
+        }
     }
-}
-
-recentProducts(products);
+    
+    recentProducts(products);
 
 // Search product
 let productSearch = document.querySelector('[data-search-product]');
@@ -140,7 +144,12 @@ productSearch.addEventListener('input', () => {
         });
         recentProducts(searchItem); // Call recentProducts with filtered items
     } catch (e) {
-        alert('Function is under maintenance');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 });
 
@@ -158,7 +167,12 @@ productSort.addEventListener('click', () => {
         }
         recentProducts(products); // Call recentProducts with sorted items
     } catch (e) {
-        alert('This Function is under maintenance');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 });
 
@@ -170,7 +184,12 @@ function addToCart(product) {
         localStorage.setItem('checkout', JSON.stringify(cart));
         document.querySelector('[counter]').textContent = cart.length || 0;
     } catch (e) {
-        alert('The Checkout is under maintenance');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 }
 

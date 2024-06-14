@@ -155,5 +155,6 @@ adminSavedProduct.addEventListener('click', () => {
 });
 
 window.onload = () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     document.querySelector('[counter]').textContent = cart.length || 0;
 };

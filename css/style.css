@@ -26,6 +26,11 @@
     }
     
 }
+.nav-link:hover{
+    background-color: lightblue;
+    color:white;
+}
+
 /* All the images */
 img {
     aspect-ratio: 1;
@@ -68,23 +73,35 @@ img {
 /* HOME PAGE */
 .container-fluid1 {
     min-height: 89.8vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     color: white;
-
 }
-.card{
+
+.card {
     background: transparent;
     text-align: center;
 }
 
-.container{
+.container {
     display: grid;
     margin-left: 15px;
+}
+
+@media (width < 999px) {
+    .container-fluid1 {
+        min-height: auto; /* Adjust as needed */
+    }
+    .container {
+        margin-left: 0;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+    }
 }
 
 /* end of home page */
@@ -123,7 +140,16 @@ img {
     padding-top: 50px;
 }
 .p2 {
-    font-family:  'Lora', serif;
+    font-family: 'emilys candy';
+}
+@media (max-width: 991.98px) {
+    .container3 {
+        max-width: 600px; /* Adjust max-width as needed */
+    }
+
+    #box1 {
+        width: 100%; /* Adjust box width for smaller screens */
+    }
 }
 
 /* end of about page */
@@ -200,7 +226,7 @@ img {
 /* end of checkout page */
 
 /* PRODUCTS PAGE */
-.container-fluidP{
+.container-fluidP {
     background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
@@ -210,19 +236,36 @@ img {
     place-items: center;
     min-height: 89.8vh;
 }
-.btn{
+
+.btn {
     background-color: lightblue;
 }
-.card{
+
+.card {
     box-shadow: 0 0 20px 0 pink;
     border-radius: 15px;
     padding: 10px;
     background: transparent;
     color: white;
+    Width: 300px
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust as needed */
+}
+@media (max-width: 991.98px) {
+    .card {
+        width: 100%; /* Adjust card width for smaller screens */
+    }
+    .card-container {
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
 }
 
 /* START OF CONTACT FORM */
-.container-fluid4{
+.container-fluid4 {
     background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
     background-position: center;
@@ -241,24 +284,41 @@ img {
 .contact .heading-text {
     background-color: pink;
 }
+
 .submit,
 .reset {
-  color: white;
-  border: 2px solid white;
-  margin-left: 5px;
-  margin-right: 5px;
-  --bg: #000;
-  transition: 0.2s;
-  align-items: center;
+    color: white;
+    border: 2px solid white;
+    margin-left: 5px;
+    margin-right: 5px;
+    --bg: #000;
+    transition: 0.2s;
+    align-items: center;
 }
+
 .submit:hover,
 .reset:hover {
-  transform: translate(-0.25rem, -0.25rem);
-  box-shadow: 0.25rem 0.25rem var(--bg);
-  background: pink!important;
-  color: white !important;
-  border: 2px solid white;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+    background: pink!important;
+    color: white !important;
+    border: 2px solid white;
 }
+
+@media (width < 999px) {
+    .contact {
+        text-align: center;
+    }
+}
+
+@media (width < 999px) {
+    .submit,
+    .reset {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
 /* end of contact form */
 
 /* START OF ADMIN PAGE */
@@ -306,6 +366,7 @@ input {
   border-color: black;
   --bg: #000;
   transition: 0.2s;
+  display: block;
 }
 .addButton:hover,
 .delBtn:hover {
