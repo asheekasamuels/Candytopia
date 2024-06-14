@@ -155,6 +155,7 @@ adminSavedProduct.addEventListener('click', () => {
 });
 
 window.onload = () => {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    document.querySelector('[counter]').textContent = cart.length || 0;
-};
+    document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
+        ? JSON.parse(localStorage.getItem('checkout')).length
+        : 0
+}

@@ -69,5 +69,7 @@ document.querySelector('.purchaseButton').addEventListener('click', productPayme
 document.querySelector('.clearButton').addEventListener('click', clearProducts);
 
 window.onload = () => {
-    document.querySelector('[counter]').textContent = cart.length || 0;
-};
+    document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
+        ? JSON.parse(localStorage.getItem('checkout')).length
+        : 0
+}

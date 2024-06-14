@@ -182,8 +182,10 @@ function addToCart(product) {
     try {
         cart.push(product);
         localStorage.setItem('checkout', JSON.stringify(cart));
-        document.querySelector('[counter]').textContent = cart.length || 0;
-    } catch (e) {
+        ocument.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
+        ? JSON.parse(localStorage.getItem('checkout')).length
+        : 0
+} catch (e) {
         tableContent.innerHTML = `
         <div class="d-flex justify-content-center">
             <div class="spinner-border" role="status"></div>
@@ -194,5 +196,7 @@ function addToCart(product) {
 }
 
 window.onload = () => {
-    document.querySelector('[counter]').textContent = cart.length || 0;
-};
+    document.querySelector('[counter]').textContent = JSON.parse(localStorage.getItem('checkout'))
+        ? JSON.parse(localStorage.getItem('checkout')).length
+        : 0
+}
