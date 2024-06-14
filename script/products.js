@@ -105,33 +105,35 @@ let products =
 document.querySelector('[currentYear]').textContent =
     new Date().getUTCFullYear();
 
-function recentProducts(products) {
-    try {
-        wrapper.innerHTML = ''; // Clear the wrapper
-        products.forEach(product => {
-            wrapper.innerHTML += `
-                <div class="card">
-                    <img src="${product.img_url}" class="card-img-top" alt="${product.id}" loading='lazy'>
-                    <div class="card-body">
-                        <h5 class="card-title">${product.productName}</h5>
-                        <p class="card-text">${product.description}</p>
-                        <p class="card-text">${product.amount}</p>
-                        <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
+    function recentProducts(products) {
+        try {
+            const wrapper = document.getElementById('wrapper');
+            wrapper.innerHTML = ''; // Clear the wrapper
+            products.forEach(product => {
+                wrapper.innerHTML += `
+                    <div class="card">
+                        <img src="${product.img_url}" class="card-img-top" alt="${product.id}" loading='lazy'>
+                        <div class="card-body">
+                            <h5 class="card-title">${product.productName}</h5>
+                            <p class="card-text">${product.description}</p>
+                            <p class="card-text">${product.amount}</p>
+                            <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to cart</button>
+                        </div>
                     </div>
-                </div>
-            `;
-        });
-    }catch (e) {
+                `;
+            });
+        } catch (e) {
+            const tableContent = document.getElementById('table-content');
             tableContent.innerHTML = `
-            <div class="d-flex justify-content-center">
-                <div class="spinner-border" role="status"></div>
-                <p>No Products Found</p>
-            </div>
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status"></div>
+                    <p>No Products Found</p>
+                </div>
             `;
         }
     }
-
-recentProducts(products);
+    
+    recentProducts(products);
 
 // Search product
 let productSearch = document.querySelector('[data-search-product]');

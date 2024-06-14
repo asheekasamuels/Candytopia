@@ -240,6 +240,13 @@ img {
     padding: 10px;
     background: transparent;
     color: white;
+    Width: 300px
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust as needed */
 }
 
 @media (max-width: 768px) {
