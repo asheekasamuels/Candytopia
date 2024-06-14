@@ -35,6 +35,16 @@ function cartItems() {
             </tr>`;
     }
     checkoutTable.innerHTML = tableContent;
+    try {
+        document.querySelector('[sub-total]').textContent = cart.reduce((total, item) => total + item.amount, 0).toFixed(2);
+    } catch (e) {
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
+    }
 }
 
 cartItems();

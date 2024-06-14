@@ -82,6 +82,11 @@ img {
     text-align: center;
 }
 
+.container{
+    display: grid;
+    margin-left: 15px;
+}
+
 /* end of home page */
 
 /* ABOUT PAGE */
@@ -217,7 +222,6 @@ img {
 }
 
 /* START OF CONTACT FORM */
-
 .container-fluid4{
     background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;

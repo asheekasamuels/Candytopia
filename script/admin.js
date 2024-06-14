@@ -93,7 +93,12 @@ function deleteProduct(index) {
         localStorage.setItem('products', JSON.stringify(products));
         adminContent(products);
     } catch (e) {
-        alert('Unable to Delete');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 }
 
@@ -110,7 +115,12 @@ document.getElementById('adminSortProduct').addEventListener('click', () => {
         }
         adminContent(products);
     } catch (e) {
-        alert('This Function is under maintenance');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 });
 
@@ -135,7 +145,12 @@ adminSavedProduct.addEventListener('click', () => {
         document.querySelector('#addAmount').value = '';
         document.querySelector('#addImage').value = '';
     } catch (e) {
-        alert('Unable to Add new product');
+        tableContent.innerHTML = `
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+            <p>No Products Found</p>
+        </div>
+        `;
     }
 });
 
