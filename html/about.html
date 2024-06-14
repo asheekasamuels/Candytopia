@@ -110,9 +110,14 @@
   </script>
   <!-- Custom's script -->
   <script>
-    // current year
-    document.querySelector("[currentYear]").textContent =
-      new Date().getUTCFullYear();
+    // Set current year
+    document.querySelector("[currentYear]").textContent = new Date().getUTCFullYear();
+    
+    // Set cart counter on window load
+    window.onload = () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.querySelector('[counter]').textContent = cart.length || 0;
+    };
   </script>
 </body>
 

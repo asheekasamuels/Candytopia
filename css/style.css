@@ -73,8 +73,7 @@ img {
 /* HOME PAGE */
 .container-fluid1 {
     min-height: 89.8vh;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
     background-image: url(https://asheekasamuels.github.io/All-Images/images/candyland.webp);
     background-size: cover;
@@ -360,21 +359,22 @@ input {
 }
 .addButton,
 .delBtn {
-  margin-left: 5px;
-  background: white;
-  color: black;
-  border-color: black;
-  --bg: #000;
-  transition: 0.2s;
-  display: block;
+    margin: 5px; /* Increase space between buttons for mobile */
+    background: white;
+    color: black;
+    border-color: black;
+    --bg: #000;
+    transition: 0.2s;
+    width: 80%; /* Adjust button width for mobile */
 }
+
 .addButton:hover,
 .delBtn:hover {
-  transform: translate(-0.25rem, -0.25rem);
-  box-shadow: 0.25rem 0.25rem var(--bg);
-  background: black;
-  color: white;
-  border: 2px solid white;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+    background: black;
+    color: white;
+    border: 2px solid white;
 }
 
 table {
@@ -400,6 +400,19 @@ td {
 }
 #table {
   margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+    table {
+        width: 100%; /* Adjust table width for smaller screens */
+    }
+
+    .input,
+    input,
+    .addButton,
+    .delBtn {
+        margin-right: 5px; /* Adjust margins for smaller screens */
+        margin-left: 0px; /* Adjust margins for smaller screens */
+    }
 }
 /* end of admin page */
 
