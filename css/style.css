@@ -209,6 +209,7 @@ img {
     display: grid;
     place-items: center;
     min-height: 89.8vh;
+    margin: 0 auto;
 }
 .btn{
     background-color: lightblue;
